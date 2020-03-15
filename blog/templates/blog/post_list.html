@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+{% for post in posts %}
+
+
+		<div class="content material-box">
+			<h2 class="uppercase ultrabold quarter-bottom"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+			<p>
+				{{ post.text|linebreaksbr }}
+			</p>
+			<a href="{% url 'post_detail' pk=post.pk %}" class="button button-round bg-magenta-light">читати дальше</a>
+		</div>
+		
+{% endfor %}
+{% endblock %}
+

@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<div class="page-content">
+
+		<div class="material-box">
+			<h1 class="news-post-title">{{ post.title }}</h1>
+			<em class="news-post-info half-bottom">in <a href="#"> {{ post.published_date }}</a></em>
+
+{{ post.text|linebreaksbr }}
+
+			
+		</div>
+
+{% endblock %}
